@@ -1,0 +1,294 @@
+:root {
+  --text-color1: rgb(29, 115, 136);
+  --text-color2: rgb(255, 255, 255);
+   --background-color: rgb(5, 8, 12);
+}
+
+/* Global */
+body {
+  background-color: var(--background-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.headD {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 50px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  z-index: 100;
+
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Left Logo */
+.headD .left a {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--text-color1);
+  text-decoration: none;
+}
+
+/* Nav links */
+.headD .right a {
+  color: var(--text-color2);
+  margin: 0 10px;
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Hover animation */
+.headD .right a:hover {
+  color: rgb(133, 195, 239);
+}
+
+.headD .right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--text-color1);
+  transition: width 0.5s ease;
+}
+
+.headD .right a:hover::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .headD {
+    display: block;
+    padding: 10px 20px;
+    height: auto;
+    padding-bottom: 80px;
+  }
+
+  .headD .left {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .headD .right {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
+
+/*Home Section*/
+.HSection {
+    align-items: center;
+justify-content: spacze-between;
+  padding: 0 50px;
+  color: var(--text-color2);
+}
+
+.homeNav {
+  display: flex;
+  padding-top: 150px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.HSection h1 span{
+    color: rgb(87, 118, 144);
+  }
+
+    .HSection .names{
+   padding-bottom: 20px;
+   font-size: 40px;
+    }
+
+.HSection .homeNav p {
+  font-size: 20px;
+  padding-bottom:20px;
+  padding-right: 50px;
+  display: flex;
+  
+}
+
+
+ 
+/*glowing btn*/
+.btn1{
+  display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+color: var(--text-color1);
+  font-size: 10px;
+  width: 200px;
+  height: 50px;
+ border-radius: 20px;
+ border:solid 2px var(--text-color1) ;
+ background-color: black;
+
+ 
+}
+
+.btn1:hover{
+background-color: var(--text-color1);
+  color: black;
+  transition: .3s;
+  cursor: pointer;
+}
+
+
+/*Picture Controller*/
+.Headhead{
+display: flex;
+  justify-content: right;
+}
+.Picmo {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid black;
+  box-shadow: 0 0 20px 5px rgb(38, 63, 66);
+  cursor: pointer;
+}
+
+.Picmo{
+flex: 5px;
+display: flex;
+justify-content: right;
+}
+
+
+
+
+
+/*Home Screen fit*/
+@media (max-width: 850px) {
+  .HSection {
+    display: block;
+    text-align: center;
+    padding-top:80px;
+ 
+  }
+  .Picmo {
+    
+    width: 230px; 
+    height: 230px;
+  }
+
+ .whoknows h1, p {
+  
+justify-content: left;
+  align-items: left;
+  text-align:left;
+}
+.homeNav {
+  flex-direction: column;
+  }
+  .Headhead{
+    order: -1;
+    padding-bottom: 70px;
+  }
+
+
+
+}
+
+
+
+
+
+
+/*Home Screen fit*/
+
+
+.devider {
+ display: flex;
+ justify-self: space-between;
+ align-items: center;
+}
+
+
+.top{
+  height: 100%;
+   background-attachment: red ;
+}
+.bottom{
+  height: 100%;
+  background-attachment: blue ;
+}
+
+
+
+
+.socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  align-items: center;
+  padding-left:30px;
+  padding-top: 15px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  opacity: 0.8;
+  transition: 0.2s;
+  padding-right: 20px;
+}
+
+.icon:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+.socials a:nth-child(1) .icon { 
+  fill: #1877F2; } 
+.socials a:nth-child(2) .icon { 
+  fill: #C13584; }
+.socials a:nth-child(3) .icon { 
+  fill: #ffffff; } 
+
+
+
+
+  .page-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  margin-top: 40px;
+}
+
+.nav-btn {
+
+   background-color: rgb(46, 47, 46);
+  
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+ background-color: var(--text-color1);
+}

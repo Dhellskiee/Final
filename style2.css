@@ -1,0 +1,205 @@
+   :root {
+      --text-color1: rgb(29, 115, 136);
+      --text-color2: rgb(255, 255, 255);
+      --background-color: rgb(5, 8, 12);
+
+      /* Card Colors */
+      --card-bg: rgb(10, 14, 20);
+      --card-text: rgb(210, 220, 235);
+      --shadow: rgba(106, 128, 162, 0.4);
+      --hover-shadow: rgba(150, 170, 200, 0.7);
+    }
+
+    /* Global */
+    body {
+      background-color: var(--background-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    .headD {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 50px;
+      height: 50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 95%;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(15px);
+    }
+
+    /* Logo */
+    .headD .left a {
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--text-color1);
+      text-decoration: none;
+    }
+
+    /* Navigation links */
+    .headD .right a {
+      color: var(--text-color2);
+      margin: 0 10px;
+      text-decoration: none;
+      position: relative;
+      padding: 5px;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover effect for nav */
+    .headD .right a:hover {
+      color: rgb(133, 195, 239);
+    }
+
+    .headD .right a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--text-color1);
+      transition: width 0.5s ease;
+    }
+
+    .headD .right a:hover::after {
+      width: 100%;
+    }
+
+    /* Responsive header */
+    @media (max-width: 768px) {
+      .headD {
+        display: block;
+        padding: 10px 20px;
+        padding-bottom: 80px;
+        height: auto;
+      }
+
+      .headD .left {
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+      .headD .right {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+    }
+
+
+
+
+
+    
+
+    /* Achievements Section */
+.achievements-section {
+  padding: 120px 20px 50px;
+  color: var(--card-text);
+  text-align: center;
+}
+
+.achievements-section h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  
+}
+
+/* Cards Container */
+.achievements-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 0 30px;
+}
+
+/* Individual Card */
+.ach-card {
+ 
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px var(--shadow);
+  transition: 0.3s ease;
+}
+
+.ach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px var(--hover-shadow);
+}
+
+.ach-card h2 {
+  
+ color:var(--text-color1);
+  margin-bottom: 10px;
+}
+
+.ach-card p {
+  color: rgb(180, 190, 205);
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+    /* Divider */
+    .inside {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .line {
+      width: 80%;
+      height: 1px;
+      background-color: rgb(57, 58, 59);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .page-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  margin-top: 40px;
+}
+
+.nav-btn {
+
+   background-color: rgb(46, 47, 46);
+  
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+ background-color: var(--text-color1);
+}
